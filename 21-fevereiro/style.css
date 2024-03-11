@@ -1,0 +1,72 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+}
+
+/* .box::before {
+    content: '5555';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: teal;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.square {
+    width: 200px;
+    height: 300px;
+    background: teal;
+}
+.box__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+} */
+
+.grid__container {
+  display: grid;
+  /* создаем структуру грид для блоков */
+  grid-template-columns: 200px 200px 1fr 200px 200px;
+  /* создает необходимое кол-во колон для сетки */
+  grid-template-rows: 200px 400px 600px;
+  /* создает необходимое кол-во строк для сетки */
+  row-gap: 20px;
+  /* создает расстояние между строками */
+  column-gap: 50px;
+  /* создает расстояние между колоннами */
+}
+.box:nth-child(3) {
+  background-color: teal;
+  grid-column-start: 5;
+  /* с какой колонны будет стартовать элемент, к которому было применено это свойство */
+  grid-row-start: 3;
+  /* с какой стройки будет стартовать элемент, к которому было применено это свойство */
+  align-self: center;
+  /* выравнивает по вертикали */
+  justify-self: center;
+  /* выравнивает по горизонтали */
+}
+
+.second__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.second__item {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}

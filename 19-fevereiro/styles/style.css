@@ -5,24 +5,6 @@
 }
 
 
-.box {
-    position: relative;
-    margin: 100px 0 0 200px;
-    width: 200px;
-    height: 50px;
-    background-color: teal;
-}
-
-.box::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    width: 200px;
-    height: 50px;
-    background-color: red;
-}
-
 
 .item {
     margin: 100px 0 0 200px;
